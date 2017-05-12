@@ -1,0 +1,17 @@
+<% if datum.errors.any? %>
+  <div class="card card-inverse card-danger mb-3">
+    <div class="card-block">
+      <h2 class="card-title">
+        <%= pluralize(datum.errors.count, 'error') %>
+        prohibited this article from being saved:
+      </h2>
+      <div class="card-text">
+        <ul>
+          <% datum.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>

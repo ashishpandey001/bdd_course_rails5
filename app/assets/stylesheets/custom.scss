@@ -1,0 +1,26 @@
+body{
+  background-color: #e1e1e1;
+  color: #64103f;
+}
+
+.navbar{
+  background-color: #64103f;
+}
+
+.navbar-brand{
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand:hover{
+  color: red;
+}
+
+.navbar-nav > li > a{
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-nav > li > a:hover{
+  color: red;
+}
