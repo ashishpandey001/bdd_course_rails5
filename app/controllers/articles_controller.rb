@@ -27,4 +27,11 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body)
   end
+
+  protected
+
+  def resource_not_found
+    flash[:alert] = 'The article you are looking for could not be found'
+    redirect_to root_path
+  end
 end
