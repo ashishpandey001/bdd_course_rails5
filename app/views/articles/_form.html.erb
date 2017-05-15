@@ -1,23 +1,28 @@
-<%= form_for @article, html: { class: 'form-horizontal', role: 'form' } do |f| %>
-  <div class="form-group">
-    <div class="control-label col-md-1">
-      <%= f.label :title %>
-    </div>
-    <div class="col-md-12">
-      <%= f.text_field :title, class: 'form-control', placeholder: 'Title of the article', autofocus: true %>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <%= render partial: 'shared/errors', locals: { datum: @article } %>
+    <%= form_for @article, html: { class: 'form-horizontal', role: 'form' } do |f| %>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label :title %>
+        </div>
+        <div class="col-md-12">
+          <%= f.text_field :title, class: 'form-control', placeholder: 'Title of the article', autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label :body %>
+        </div>
+        <div class="col-md-12">
+          <%= f.text_area :body, rows: 10, class: 'form-control', placeholder: 'Body of the article' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-12">
+          <%= f.submit class: 'btn btn-primary btn-lg btn-block' %>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="form-group">
-    <div class="control-label col-md-1">
-      <%= f.label :body %>
-    </div>
-    <div class="col-md-12">
-      <%= f.text_area :body, rows: 10, class: 'form-control', placeholder: 'Body of the article' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-md-12">
-      <%= f.submit class: 'btn btn-primary btn-lg btn-block' %>
-    </div>
-  </div>
-<% end %>
+</div>
