@@ -20,6 +20,6 @@ RSpec.feature 'Signup users' do
     fill_in 'Password confirmation', with: ''
     click_button 'Sign up'
 
-    # expect(page).to have_content('You have not been signed up successfully')
+    expect(page).to have_content('errors prohibited this user from being saved')
   end
 end
